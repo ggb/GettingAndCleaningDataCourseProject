@@ -88,5 +88,5 @@ activity_means <- aggregate(activity_means, by = list(activity_means$subject, ac
 activity_means <- activity_means[, 1:68]
 names(activity_means) <- c("subject", "activity", names(activity_means)[3:68])
 
-# write to csv
-write.csv(activity_means, "tidy_activity_means.csv")
+# write to txt
+write.table(activity_means, "tidy_activity_means.txt", row.name=FALSE)
